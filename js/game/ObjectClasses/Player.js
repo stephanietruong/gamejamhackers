@@ -7,6 +7,8 @@ Player = function() {
 	this.mVerticalSpeed = 0;
 	this.mFallSpeed = 0;
 	this.mBoostSpeed = 0;
+	this.mInvinsible = false;
+	this.mInvinsibleTimer = 5;
 	
 	// Animation settings
 	this.currentAnim = null;
@@ -15,6 +17,7 @@ Player = function() {
 	
 	// Boring stuff
 	this.addEventListener("update", this.UpdatePosition.bind(this));
+	this.addEventListener("update", this.UpdateInvinsiblity.bind(this));
 	this.useWorldPosition(true);
 	return this;
 }
@@ -153,6 +156,20 @@ Player.prototype = {
 	SetBoostSpeed : function(boostSpeed) {
 		this.mBoostSpeed = boostSpeed * this.mGame.height;
 	},
+
+	UpdateInvinsiblity: function (event) {
+		var elapsedTime = event.elapsedTime;
+
+		if (this.mInvinsible == true){
+			this.mInvinsibleTimer -= elapsedTime;
+			if (this.mInvinsibleTimer < 0){
+				this.mInvinsible = false;
+				this.mGame.GetPlayer().alpha = 1;
+			}
+
+		}
+		// body...
+	}
 	
 	
 }

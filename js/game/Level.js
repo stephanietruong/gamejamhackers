@@ -6,26 +6,32 @@ var level = [
     {fall_speed:0.003},
     {boost_speed:0.01},
 
-    
-    //Obstacles
-    {begin_segment:"Some Obstacles"},
-
-   {time:0,     event:"obstacle_frequency",     value:500},
-
-   {time:0,     event:"obstacle_pattern",     value:"C12A12CB21"},
-
-   {time:12,    event:"end_segment"},
-
-
     //Coins
     {begin_segment:"Coin Line"},
 
     {time:0,     event:"coin_y",         value:0.75},
 
-    {time:2,     event:"coin_frequency", value:200},
+    {time:2,     event:"coin_frequency", value: 350},
 
     {time:3,     event:"end_segment"},
+  
+    //Obstacles
+    {begin_segment:"Some Obstacles"},
 
+   {time:0,     event:"obstacle_frequency",     value:500},
+
+   {time:0,     event:"obstacle_pattern",     value:"312A12B"},
+
+   {time:12,    event:"end_segment"},
+
+   //Coins
+    {begin_segment:"Coin Line"},
+
+    {time:0,     event:"coin_y",         value:0.75},
+
+    {time:2,     event:"coin_frequency", value:500},
+
+    {time:3,     event:"end_segment"},
 
     //Obstacle
     {begin_segment:"An Obstacle"},
@@ -37,7 +43,7 @@ var level = [
     {time:1,     event:"end_segment"},
 
 
-    //Coin Boxes
+    /*//Coin Boxes
     {begin_segment:"Coin Boxes"},
 
     {time:0,     event:"coin_y",             value:0.5},
@@ -50,7 +56,7 @@ var level = [
 
     {time: 6,    event:"end_segment"}, 
 
-
+*/
     //Obstacle
     {begin_segment:"Some More Obstacles"},
 
@@ -60,7 +66,7 @@ var level = [
 
     {time:3,     event:"end_segment"},
 
-
+/*
     //Coin Sinewave
     {begin_segment:"A Coin Sinewave"},
 
@@ -74,7 +80,7 @@ var level = [
 
     {time:4,    event:"end_segment"},
 
-
+*/
     //Obstacles
     {begin_segment:"Even More Obstacles"},
 

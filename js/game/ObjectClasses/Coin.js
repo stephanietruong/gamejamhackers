@@ -1,4 +1,3 @@
-
 Coin = function()
 {
 	//Coin settings

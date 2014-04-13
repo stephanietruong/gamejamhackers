@@ -8,11 +8,10 @@ Runner = function()
         //Stationary Obstacles
         {id:'stationary_obstacle_1', 	url:'stationaryObstacles/stationary_obstacle_1.png'},
         {id:'stationary_obstacle_2', 	url:'stationaryObstacles/stationary_obstacle_2.png'},
-       
+        {id:'stationary_obstacle_3',    url:'stationaryObstacles/stationary_obstacle_3.png'},
         //Moving Obstacles
         {id:'moving_obstacle_A', 		url:'movingObstacles/moving_obstacle_A.png'},
-        {id:'moving_obstacle_B', 		url:'movingObstacles/moving_obstacle_B.png'},
-        {id:'moving_obstacle_C',        url:'movingObstacles/moving_obstacle_C.png'},       
+        {id:'moving_obstacle_B', 		url:'movingObstacles/moving_obstacle_B.png'},   
         
         //Coins
         {id:'coin',   					url:'coin.png'},

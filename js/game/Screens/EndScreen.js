@@ -48,7 +48,7 @@ EndScreen.prototype = {
 		EndScreen.superclass.setup.call(this, params);
 
 		// Update final totals
-		this.coinDisplay.text = params.coins.toString();
+		this.coinDisplay.text = 0;
 		this.distanceDisplay.text = params.distance.toString();
 		this.scoreDisplay.text = params.score.toString();
 	    

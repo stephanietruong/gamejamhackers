@@ -3,7 +3,7 @@ GameScreen = function(width, height) {
 
 	//Stats
 	this.mDistance = 0;
-	this.mCoins = 100;
+	this.mCoins = 0;
 	
 	//Level stuff
 	this.mEventTimer = 0;
@@ -127,7 +127,7 @@ GameScreen.prototype = {
 					this.mCoinHeight = this.height * nextEvent.value;
 				}
 				
-				// starting a coin sine wave?
+				/*// starting a coin sine wave?
 				else if (nextEvent.event == "coin_sinewave") {
 					this.mCoinWaveAmplitude = nextEvent.amplitude;
 					this.mCoinWaveFrequency = nextEvent.amplitude == 0 ? 0 : nextEvent.frequency;
@@ -138,7 +138,7 @@ GameScreen.prototype = {
 				else if (nextEvent.event == "coin_box"){
 		            this.GenerateCoinBox(nextEvent.size);
 		        }
-				
+				*/
 				// setting the obstacle frequency?
 				else if (nextEvent.event == "obstacle_frequency") {
 					this.mObstacleFrequency = nextEvent.value;

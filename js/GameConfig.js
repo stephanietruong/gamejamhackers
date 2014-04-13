@@ -18,6 +18,7 @@ var GameConfig = {
 	    "js/game/ObjectClasses/Coin.js",
 	    "js/game/ObjectClasses/StationaryObstacle.js",
 	    "js/game/ObjectClasses/MovingObstacle.js",
+        /*"js/game/ObjectClasses/speed.js"*/
 	    
 	    "js/game/Screens/GameScreen.js",
 	    "js/game/Screens/EndScreen.js",

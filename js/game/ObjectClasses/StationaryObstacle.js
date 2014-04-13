@@ -25,16 +25,22 @@ StationaryObstacle.prototype = {
 		if (type == 1) {  								
 			params.image = "stationary_obstacle_1";
 			//params.worldY = 400;
-				params.worldY = 400;
+				params.worldY = 300;
 		}	
 		
 		// Pile of bolts
 		else if (type == 2) {  							
 			params.image = "stationary_obstacle_2";
 			//params.worldY = 0;
-				params.worldY = 0;
+				params.worldY = 35;
 		}
-		
+
+		else if (type == 3) {  							
+			params.image = "stationary_obstacle_3";
+			//params.worldY = 0;
+				params.worldY = 35;
+		}
+		this.type = type;
 	},
 
 
@@ -47,18 +53,26 @@ StationaryObstacle.prototype = {
 		if (obstacleBounds.intersects(playerBounds, obstacleBuffer, playerBuffer)) {
 
 			/*this.mGame.GetPlayer().mStopped = true;*/
-			
-			this.mGame.PlayerHitObstacle();
-			if (this.mGame.mCoins > 6){
-				this.mGame.mCoins -= 5;
-				console.log("stop?");
-			}else{
-				console.log("stop here? really?");
-				this.mGame.GetPlayer().mStopped = true;
-				this.mGame.EndGame();
-			};
-			this.markForRemoval();	
-				
+			if (this.type ==3) {
+
+				this.mGame.GetPlayer().mInvinsible = true;
+				this.mGame.GetPlayer().mInvinsibleTimer = 5;
+				this.mGame.GetPlayer().alpha = 0.5;
+				this.markForRemoval();
+			}
+			else if (!this.mGame.GetPlayer().mInvinsible)
+			{
+				this.mGame.PlayerHitObstacle();
+				if (this.mGame.mCoins > 1){
+					this.mGame.mCoins -= 1;
+					console.log("stop?");
+				}else{
+					console.log("stop here? really?");
+					this.mGame.GetPlayer().mStopped = true;
+					this.mGame.EndGame();
+				};
+				this.markForRemoval();	
+			}
 			//this.EndGame();
 		 
 		}	

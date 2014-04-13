@@ -75,8 +75,8 @@ MovingObstacle.prototype = {
 		if (!this.mTriggered && obstacleBounds.intersects(playerBounds, obstacleBuffer, playerBuffer)) {
 			this.mTriggered = true; 
 			this.mGame.PlayerHitObstacle();
-			if (this.mGame.mCoins > 6){
-				this.mGame.mCoins -= 5;
+			if (this.mGame.mCoins > 1){
+				this.mGame.mCoins -= 1;
 				console.log("stop?");
 			}else{
 				console.log("stop here? really?");
